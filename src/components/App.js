@@ -39,15 +39,15 @@ function createMovieElement({ title, poster_path, vote_average, overview, id }) 
         <h3>Overview</h3>
         ${overview}
         <br/> 
-        <button class="know-more" data-id="${id}">Know More</button>
+        <button class="know-more" data-id="${id}"><a href="/#details">Know More</a></button>
     </div>
-  `;
+  `;  
 
   return movieEl;
 }
 
 function getColor(vote) {
-  if (vote >= 8) {
+  if (vote >= 8) {  
     return 'green';
   } else if (vote >= 5) {
     return 'orange';
