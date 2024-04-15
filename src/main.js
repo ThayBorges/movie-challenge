@@ -10,7 +10,7 @@ const init = () => {
         break;
       case "#details":
         console.log(localStorage.getItem('id'));
-        main.appendChild(details());
+        main.appendChild(details(localStorage.getItem('id')));
         break;
       default:
         main.appendChild(App());
