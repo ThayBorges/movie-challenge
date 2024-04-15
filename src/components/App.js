@@ -39,9 +39,16 @@ function createMovieElement({ title, poster_path, vote_average, overview, id }) 
         <h3>Overview</h3>
         ${overview}
         <br/> 
-        <button class="know-more" data-id="${id}"><a href="/#details">Know More</a></button>
+        <button class="know-more" data-id="${id}">Know More</button>
     </div>
   `;  
+
+  movieEl.querySelector('.know-more').addEventListener('click', () => {
+    console.log('cheguei aqui');
+    window.location.hash="#details";
+    localStorage.setItem('id',id);
+   
+  })
 
   return movieEl;
 }

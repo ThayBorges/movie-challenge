@@ -11,6 +11,11 @@ export const getMovies = (query='') => {
     return fetch(url).then((res) => res.json());
 }
 
+export const getDetails = (query='') => {
+    const url=DISCOVER_URL + '&' + query
+    return fetch(url).then((res) => res.json());
+}
+
 export const searchMovies = (query='') => {
     const url=searchURL + '&' + query
     console.log(url);
