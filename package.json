@@ -5,7 +5,7 @@
   "main": "src/index.html",
   "license": "MIT",
   "scripts": {
-    "pretest": "eslint .",
+    "_pretest": "eslint . --fix",
     "test": "jest --coverage",
     "start": "serve src/"
   },

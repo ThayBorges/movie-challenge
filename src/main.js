@@ -3,6 +3,7 @@ import details from './components/details.js';
 
 const init = () => {
   window.addEventListener("hashchange", () => {
+    const main = document.querySelector('main');
     main.innerHTML = "";
     switch(window.location.hash) {
       case " ":
@@ -15,11 +16,8 @@ const init = () => {
       default:
         main.appendChild(App());
     }
-    console.log(window.location.hash);
   })
 }
-
-
 
 document.addEventListener('DOMContentLoaded', () => {
   const main = document.querySelector('main');

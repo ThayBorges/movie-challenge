@@ -22,6 +22,25 @@ header {
     background-color: var(--secondary-color);
 }
 
+.container-logo {
+    position: relative; /* Define o posicionamento relativo para o container */
+    width: 100%; /* Define a largura do container */
+    height: 100px; /* Define a altura do container */
+}
+
+.logo {
+    position: absolute; /* Define o posicionamento absoluto para a imagem */
+    top: 0; /* Alinha a imagem no topo */
+    left: 0; /* Alinha a imagem à esquerda */
+    width: 350px; /* Define a largura da imagem */
+    height: 100px;
+}
+
+form {
+    justify-content: center;
+    margin-top: 2rem;
+}
+
 .search {
     background-color: transparent;
     border: 2px solid var(--primary-color);
@@ -45,6 +64,10 @@ main {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+}
+
+.container {
+    display:block;
 }
 
 .movie {
@@ -107,4 +130,24 @@ main {
 
 .movie:hover .overview {
     transform:translateY(0);
+}
+
+.buttonDetails {
+    background-color: transparent;
+    border: 2px solid var(--secondary-color);
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    font-size: 1rem;
+    color:var(--secondary-color);
+    font-family: inherit;
+}
+
+footer {
+    text-align: center;
+    color: #f8f8f8; 
+    padding: 20px; /* Espaçamento interno opcional */
+}
+
+.footer-content {
+    margin: 0 auto; /* Centraliza a div */
 }
