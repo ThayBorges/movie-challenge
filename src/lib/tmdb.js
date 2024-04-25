@@ -15,18 +15,17 @@ const options = {
 
 export const getMovies = (query='') => {
    const url=DISCOVER_URL + '&' + query;
-    return fetch(url).then((res) => res.json());
+    return fetch(url).then((res) => res.json()).catch((error) => error);
 }
 
 export const getDetails = (id='') => {
-    const url=MOVIE_DETAILS + id ;
-    return fetch(url,options).then((res) => res.json());
+    const url=MOVIE_DETAILS + id + '?language=pt-BR';
+    return fetch(url,options).then((res) => res.json()).catch((error) => error);
 }
 
 export const searchMovies = (query='') => {
     const url=searchURL + '&' + query;
-    console.log(url);
-     return fetch(url).then((res) => res.json());
+     return fetch(url).then((res) => res.json()).catch((error) => error);
 }
 
 
