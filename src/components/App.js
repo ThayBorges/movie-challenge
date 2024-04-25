@@ -25,41 +25,48 @@ const App = () => {
       console.error("Error fetching movies:", error);
     });
 
-  function createMovieElement({
-    title,
-    poster_path,
-    vote_average,
-    overview,
-    id,
-  }) {
-    const movieEl = document.createElement("div");
-    movieEl.classList.add("movie");
-
-    movieEl.innerHTML = `
-    <img src="${
-      poster_path
-        ? IMG_URL + poster_path
-        : "http://via.placeholder.com/1080x1580"
-    }" alt="${title}">
-    <div class="movieInfo">
-        <h3>${title}</h3>
-        <span class="${getColor(vote_average)}">${vote_average}</span>
-    </div>
-    <div class="overview">
-        <h3>Overview</h3>
-        ${overview}
-        <br/> 
-        <button class="know-more" data-id="${id}">Saiba Mais</button>
-    </div>
-  `;
-
-    movieEl.querySelector(".know-more").addEventListener("click", () => {
-      window.location.hash = "#details";
-      localStorage.setItem("id", id);
-    });
-
-    return movieEl;
-  }
+    function createMovieElement({
+      title,
+      poster_path,
+      vote_average,
+      overview,
+      id,
+    }) {
+      const maxOverviewLength = 150; // Número máximo de caracteres a serem exibidos no resumo
+  
+      const truncatedOverview = overview.length > maxOverviewLength
+        ? overview.substring(0, maxOverviewLength) + '...' // Adiciona reticências se o resumo for maior que o máximo
+        : overview;
+  
+      const movieEl = document.createElement("div");
+      movieEl.classList.add("movie");
+  
+      movieEl.innerHTML = `
+      <img src="${
+        poster_path
+          ? IMG_URL + poster_path
+          : "http://via.placeholder.com/1080x1580"
+      }" alt="${title}">
+      <div class="movieInfo">
+          <h3>${title}</h3>
+          <span class="${getColor(vote_average)}">${vote_average}</span>
+      </div>
+      <div class="overview">
+          <h3>Overview</h3>
+          ${truncatedOverview}
+          <br/> 
+          <button class="know-more" data-id="${id}">Saiba Mais</button>
+      </div>
+    `;
+  
+      movieEl.querySelector(".know-more").addEventListener("click", () => {
+        window.location.hash = "#details";
+        localStorage.setItem("id", id);
+      });
+  
+      return movieEl;
+    }
+  
 
   form.addEventListener("submit", (e) => {
     e.preventDefault();
