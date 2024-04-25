@@ -10,7 +10,7 @@ const options = {
     headers: {
       accept: 'application/json',
       Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI4ZGE1M2M3ZDE0ZjAzY2ViODdlYTA3M2UyMWM2YmMxZiIsInN1YiI6IjY2MGIwOTk0OWM5N2JkMDE2M2EzNDZjNyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.MmUXgCO_cxAjvFt4VRKr7WxFnpG643tqNrbsD9fVjSY'
-    }
+    } //variável de ambiente
   };
 
 export const getMovies = (query='') => {

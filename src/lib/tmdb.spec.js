@@ -117,34 +117,7 @@ describe("getDetails", () => {
       }
     );
   });
-
 });
-
-// describe("getDetails", () => {
-//   it("Deve chamar o filme pelo id", async () => {
-//     global.fetch = jest.fn((url, options) =>
-//       Promise.resolve({
-//         json: () => Promise.resolve({ results: moviesList }), // Certifica-se de que a estrutura da resposta está correta
-//       })
-//     );
-//     const movieId = "693134"; // Id de um filme fictício para o teste
-//     const result = await getDetails(movieId);
-
-//     expect(fetch).toHaveBeenCalledTimes(1);
-//     expect(fetch).toHaveBeenCalledWith(
-//       `https://api.themoviedb.org/3/movie/${movieId}?language=pt-BR`,
-//       {
-//         method: "GET",
-//         headers: {
-//           Authorization:
-//             "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI4ZGE1M2M3ZDE0ZjAzY2ViODdlYTA3M2UyMWM2YmMxZiIsInN1YiI6IjY2MGIwOTk0OWM5N2JkMDE2M2EzNDZjNyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.MmUXgCO_cxAjvFt4VRKr7WxFnpG643tqNrbsD9fVjSY",
-//           accept: "application/json",
-//         },
-//       }
-//     );
-//   });
-// });
-
 
 describe("searchMovies", () => {
   // Teste: Deve renderizar sem problemas

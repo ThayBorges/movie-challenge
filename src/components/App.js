@@ -36,7 +36,7 @@ const App = () => {
   
       const truncatedOverview = overview.length > maxOverviewLength
         ? overview.substring(0, maxOverviewLength) + '...' // Adiciona reticências se o resumo for maior que o máximo
-        : overview;
+        : overview; //if ternário (estudar depois)
   
       const movieEl = document.createElement("div");
       movieEl.classList.add("movie");
@@ -75,15 +75,15 @@ const App = () => {
 
     if (searchTerm) {
       const main = document.querySelector("main");
-      searchMovies("&query=" + searchTerm)
-        .then((data) => {
+      searchMovies("&query=" + searchTerm) //concatenação juntando o digitado com o query paramiter da URL
+        .then((data) => { //quando a promisse é resolvida ele cai no pluxo do then
           main.innerHTML = "";
           data.results.forEach((movie) => {
             const movieEl = createMovieElement(movie);
             main.appendChild(movieEl);
           });
         })
-        .catch((error) => {
+        .catch((error) => { //se der algum erro na promisse
           console.error("Error fetching movies:", error);
         });
     } else {
