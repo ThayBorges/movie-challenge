@@ -66,8 +66,15 @@ main {
   justify-content: center;
 }
 
+.catalogo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 .container {
   display: block;
+  display: flex;
 }
 
 .movie {

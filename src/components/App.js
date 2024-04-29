@@ -14,6 +14,7 @@ const search = document.querySelector("#search");
 
 const App = () => {
   const container = document.createElement("div");
+  container.classList.add("catalogo");
   getMovies()
     .then((data) => {
       data.results.forEach((movie) => {
