@@ -31,7 +31,7 @@ Eu, como usuária, quero visualizar um catálogo de filmes em uma tabela
 Eu, como usuária, quero consultar os detalhes de um filme.
 
 
-## Design da Interface de Usuário (Protótipo de Alta Fidelidade)
+## Design da Interface de Usuário (Protótipo de Baixa Fidelidade)
 
 **1. Protótipo:**
 
