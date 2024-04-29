@@ -8,6 +8,8 @@
 
 O **Movie Challenge** é uma página web dedicada à visualização dos filmes mais populares, de acordo com o catálogo da [_The Movie Database API V3_](https://developer.themoviedb.org/docs). Essa página funciona como um catálogo dos filmes mais populares, exibindo o pôster, o título e a classificação do filme. Ao passar o mouse sobre cada filme, é possível ver um breve resumo, e ao clicar no botão "Saiba Mais", você é direcionado a uma segunda página com detalhes adicionais.
 
+<a href='https://moviechallengebythaysa.netlify.app'><button>Clique aqui para vizualizar a aplicação</button></a>
+
 ### Recursos Principais
 
 1. **Lista dos filmes mais populares:** A aplicação apresenta a lista com os filmes mais populares da atualidade de acordo com [_The Movie Database API V3_](https://developer.themoviedb.org/docs);
